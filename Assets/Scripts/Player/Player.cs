@@ -14,14 +14,14 @@ public class Player : MonoBehaviour
     public int RequiredXP {  get {  return requiredXP; } }
     public int LevelBase { get { return levelBase; } }
     public List<GameObject> Droids { get { return droids; } }
-
+    public int Lvl {  get { return lvl; } }
     private void Start()
     {
         InitLevelData();
     }
     public void AddXp(int xp)
     {
-        this.xp = Mathf.Max(0, xp);
+        this.xp += Mathf.Max(0, xp);
     }
 
     public void AddDroid(GameObject droid)
